@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Desplegar Texto por Título</h1>
+
+    <div>
+        <p class="titulo" onclick="toggleTexto('texto1')">Misión</p>
+        <p id="texto1" class="texto">Este es el texto correspondiente al Título 1.</p>
+    </div>
+
+    <div>
+        <p class="titulo" onclick="toggleTexto('texto2')">Vision</p>
+        <p id="texto2" class="texto">Este es el texto correspondiente al Título 2.</p>
+    </div>
+
+    <script>
+        function toggleTexto(id) {
+            const texto = document.getElementById(id);
+            if (texto.style.display === "none" || texto.style.display === "") {
+                texto.style.display = "block"; // Muestra el texto
+            } else {
+                texto.style.display = "none"; // Oculta el texto
+            }
+        }
+    </script>
+</body>
+</html>
